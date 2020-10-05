@@ -44,6 +44,7 @@ with open(budget_csv, "r", encoding = "UTF-8") as csvfile:
     #This is part for the average calculation        
     avg_change = round(change / (len(profit)-1),2)
     
+#Analysis results
 analysis = f"""
 Financial Analysis
 -------------------------------------------------
@@ -55,6 +56,7 @@ Greatest Decrease in Profits: {date_gratestDec} (${greatestDec})
  """
 print(analysis)
 
+#Creation of txt file with the analysis results
 output_file = os.path.join("analysis", "analysis_file.txt")
 
 with open(output_file, "w") as textfile:
